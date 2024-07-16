@@ -45,49 +45,53 @@
 
         <section id="services">
             <div class="section-content">
-                <h2>Our Services</h2>
+                <h2>Discover Our Premium Services</h2>
                 <div class="services-grid">
                     <div class="service-card" style="background-image: url('/api/placeholder/400/300');">
                         <h3>All Inclusive</h3>
                         <ul>
                             <li>Deep Clean:</li>
-                            <li> insole</li>
-                            <li>outsole</li>
-                            <li>mid sole</li>
-                            <li>uppers and laces</li>
-                            </ul>
+                            <li>Insole</li>
+                            <li>Outsole</li>
+                            <li>Midsole</li>
+                            <li>Uppers and Laces</li>
+                        </ul>
+                        <button class="subscribe-btn" onclick="subscribe('All Inclusive')">Contact Us</button>
                     </div>
                     <div class="service-card" style="background-image: url('/api/placeholder/400/300');">
                         <h3>Low Shelf</h3>
                         <ul>
-                        <li>x2 pairs deep cleaned</li>
-                        <li>20% off cosmetic restorations</li>
-                        <li>R199</li>
+                            <li>x2 Pairs Deep Cleaned</li>
+                            <li>20% Off Cosmetic Restorations</li>
+                            <li>Only R199</li>
                         </ul>   
+                        <button class="subscribe-btn" onclick="subscribe('Low Shelf')">Subscribe</button>
                     </div>
-                    
-                <div class="service-card" style="background-image: url('/api/placeholder/400/300');">
-                    <h3>Mid Shelf</h3>    
-                    <ul>
-                            <li>x4 pairs deep cleaned</li>
-                            <li>20% off cosmetic restorations</li>
-                            <li>FREE pick up and delivery</li>
-                            <li>R310</li>
-                            </ul> 
-                            </div> 
+                    <div class="service-card" style="background-image: url('/api/placeholder/400/300');">
+                        <h3>Mid Shelf</h3>    
+                        <ul>
+                            <li>x4 Pairs Deep Cleaned</li>
+                            <li>20% Off Cosmetic Restorations</li>
+                            <li>Free Pick Up and Delivery</li>
+                            <li>Only R310</li>
+                        </ul>
+                        <button class="subscribe-btn" onclick="subscribe('Mid Shelf')">Subscribe</button>
+                    </div> 
                     <div class="service-card" style="background-image: url('/api/placeholder/400/300');">
                         <h3>Top Shelf</h3>
                         <ul>
-                            <li>x6 pairs deep cleaned</li>
-                            <li>20% off cosmetic restorations</li>
-                            <li>FREE pick up and delivery</li>
-                            <li>R499</li>
-                            </ul>  
+                            <li>x6 Pairs Deep Cleaned</li>
+                            <li>20% Off Cosmetic Restorations</li>
+                            <li>Free Pick Up and Delivery</li>
+                            <li>Only R499</li>
+                        </ul>
+                        <button class="subscribe-btn" onclick="subscribe('Top Shelf')">Subscribe</button>
                     </div>
-                    
                 </div>
             </div>
         </section>
+
+       
 
         <section id="contact">
             <div class="section-content">
@@ -109,6 +113,11 @@
     </footer>
 
     <script>
+   
+            function subscribe(service) {
+                alert('You have subscribed to the ' + service + ' service!');
+            }
+           
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {

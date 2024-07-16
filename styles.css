@@ -117,7 +117,7 @@ main {
 }
 
 .btn:hover {
-    background-color:purple;
+    background-color: purple;
 }
 
 section {
@@ -127,11 +127,14 @@ section {
 .section-content {
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
 h2 {
     color: turquoise;
     margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-family: 'Hustle', sans-serif  ;
 }
 
 .services-grid {
@@ -144,13 +147,13 @@ h2 {
 .service-card {
     background-size: cover;
     background-position: center;
-    border-radius: 5px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
-    min-height: 200px;
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -168,10 +171,11 @@ h2 {
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.service-card h3, .service-card p {
+.service-card h3, .service-card ul {
     color: #fff;
     position: relative;
     z-index: 2;
@@ -179,8 +183,36 @@ h2 {
 
 .service-card h3 {
     margin-top: 0;
+    font-size: 1.75rem;
+  font-family: 'Hustle', sans-serif  ;
 }
 
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.service-card ul li {
+    font-size: 1rem;
+}
+
+.subscribe-btn {
+    background-color: turquoise;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Hustle', sans-serif  ;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.subscribe-btn:hover {
+    background-color: darkturquoise;
+}
 #contact-form {
     display: grid;
     gap: 1rem;
