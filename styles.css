@@ -270,7 +270,7 @@ footer {
     left: 0;
     width: 0;
     height: 100%;
-    background:turquoise;
+    background:rgb(60, 89, 252);
     color: white;
     z-index: -1;
     transition: .4s;
