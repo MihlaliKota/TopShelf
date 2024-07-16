@@ -9,6 +9,8 @@ body {
 
 h1, h2, h3 {
     font-family: 'Hustle', sans-serif  ;
+    text-align: center;
+    font-size: 35px;
 }
 
 header {
@@ -33,7 +35,7 @@ header {
 .logo h1 {
     margin: 0;
     font-size: 1.5rem;
-    color: #28a745;
+    color:turquoise;
 }
 
 nav ul {
@@ -54,7 +56,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #28a745;
+    color: turquoise;
 }
 
 main {
@@ -97,11 +99,12 @@ main {
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    font-size: 30px;
 }
 
 .btn {
     display: inline-block;
-    background-color: #28a745;
+    background-color: turquoise;
     color: #fff;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -109,8 +112,12 @@ main {
     transition: background-color 0.3s ease;
 }
 
+.about p{
+    font-size: 30px;
+}
+
 .btn:hover {
-    background-color: #218838;
+    background-color:purple;
 }
 
 section {
@@ -123,7 +130,7 @@ section {
 }
 
 h2 {
-    color: #28a745;
+    color: turquoise;
     margin-bottom: 1rem;
 }
 
@@ -181,6 +188,10 @@ h2 {
     margin: 0 auto;
 }
 
+#contact p {
+    text-align: center;
+}
+
 #contact-form input, #contact-form textarea {
     width: 100%;
     padding: 0.5rem;
@@ -189,7 +200,7 @@ h2 {
 }
 
 #contact-form button {
-    background-color: #28a745;
+    background-color: turquoise;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
@@ -199,7 +210,7 @@ h2 {
 }
 
 #contact-form button:hover {
-    background-color: #218838;
+    background-color: turquoise;
 }
 
 footer {
