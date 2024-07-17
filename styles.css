@@ -58,6 +58,54 @@ nav ul li a {
 nav ul li a:hover {
     color: turquoise;
 }
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #333;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        left: 100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: all 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
 
 main {
     margin-top: 60px;
@@ -246,23 +294,59 @@ h2 {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: black;
+    color: white;
     text-align: center;
     padding: 1rem;
 }
 
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-    }
 
-    nav ul {
-        margin-top: 1rem;
-    }
 
-    nav ul li {
-        margin-left: 0;
-        margin-right: 1rem;
-    }
+
+.home-sci {
+    align-items: center;
+    width: 80px;
+    height: 80px;
 }
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    border-spacing: 1rem;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: .2rem solid #ccc;
+    border-radius: 50%;
+    font-size: 25px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.home-sci a:hover {
+    color: var(--bg-color);
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:rgb(60, 89, 252);
+    color: white;
+    z-index: -1;
+    transition: .4s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+/* nav-links section */
+
