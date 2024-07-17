@@ -112,10 +112,10 @@ main {
 }
 
 .hero {
-    background-image: url('/api/placeholder/1200/800');
+    background-image: url('images/man-male-workshop-tools.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 76vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,6 +193,7 @@ h2 {
 }
 
 .service-card {
+    background-image: url('images/man-male-workshop-tools.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 10px;
