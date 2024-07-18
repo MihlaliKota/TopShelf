@@ -1,0 +1,368 @@
+body {
+    font-family: 'Hustle', sans-serif;                                  
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+/* Navigation section */
+
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color:rgb(60, 89, 252);
+    letter-spacing: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-decoration:underline ;
+}
+
+/* nav ul li a:hover {
+    color: turquoise;
+    transition: 0.3s ease-in;
+    border: 2px solid turquoise;
+    padding: 10px;
+    background-color: transparent;
+    letter-spacing: 5px;
+    border-radius: 5px;
+    
+} */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #333;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: all 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+.main{
+    display: flex;
+    letter-spacing: 5px;
+    width: 95%;
+    margin-top: 7%;
+}
+
+.heading img {
+    width: 90%;
+    height: 500px;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+
+.heading {
+    display: grid;  
+}
+
+.heading h2{
+    margin-left: 5%;
+}
+.Welcome-msg{
+    width: 50%;
+
+}
+.Welcome-msg ul em{
+    text-decoration: underline;
+}
+
+.franchise-container {
+    display: flex;
+    width: 95%;
+    margin: 1.5rem;
+}
+.franchise-benefits{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 5px 5px  0 5px rgba(179, 179, 179, 0);
+}
+
+.franchise-process{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 5px 5px  0 5px rgba(179, 179, 179, 0);
+    margin-left: 10px;
+}
+@media (max-width: 768) {
+    .main {
+        display: inline-flex;
+    }
+}
+.card-container {
+    width: 400px;
+    height: 500px;
+    margin: 50px auto;
+    position: relative;
+    perspective: 1000px;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .card-front {
+    background-image: url('./images/TopShelf-Logo.png');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  .card-back {
+    background-color: white;
+    transform: rotateY(180deg);
+    overflow-y: auto;
+  }
+/* footer section */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.home-sci {
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    transition: color 0.3s ease-in;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    border-spacing: 1rem;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: .2rem solid #ccc;
+    border-radius: 50%;
+    font-size: 25px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.home-sci a:hover {
+    color: var(--bg-color);
+    
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:rgb(60, 89, 252);
+    color: white;
+    z-index: -1;
+    transition: .4s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.flipCard {
+    -webkit-perspective: 800;
+    -ms-perspective: 800;
+    -moz-perspective: 800;
+    -o-perspective: 800;
+    perspective: 800;
+    width: 720px;
+    height: 720px;
+    position: relative;
+    margin: 10px 50px;
+  }
+
+  .flipCard .card.flipped {
+    transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg); /* IE 9 */
+    -moz-transform: rotateY(-180deg); /* Firefox */
+    -webkit-transform: rotateY(-180deg); /* Safari and Chrome */
+    -o-transform: rotateY(-180deg); /* Opera */
+  }
+
+  .flipCard .card {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+    -moz-transform-style: preserve-3d;
+    -moz-transition: 0.5s;
+    -ms-transform-style: preserve-3d;
+    -ms-transition: 0.5s;
+    -o-transform-style: preserve-3d;
+    -o-transition: 0.5s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+  }
+
+  .flipCard .card .side {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 2;
+    backface-visibility: hidden; /* W3C */
+    -webkit-backface-visibility: hidden; /* Safari & Chrome */
+    -moz-backface-visibility: hidden; /* Firefox */
+    -ms-backface-visibility: hidden; /* Internet Explorer */
+    -o-backface-visibility: hidden; /* Opera */
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  }
+
+  .flipCard .card .back {
+    background: white;
+    color: black;
+    transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg); /* IE 9 */
+    -moz-transform: rotateY(-180deg); /* Firefox */
+    -webkit-transform: rotateY(-180deg); /* Safari and Chrome */
+    -o-transform: rotateY(-180deg); /* Opera */
+  }
+
+  .flipCard .card .front {
+    background-color: transparent;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    border: 3px solid rgb(60, 89, 252);
+    border-radius: 10px;
+  }
+
+  .flipCard .card .front h1 {
+    text-align: center;
+    letter-spacing: 3px;
+  }
+
+  .flipCard .card .front img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    margin-left: 5rem;
+  }
+
+  .flipCard .card .back {
+    background-color: transparent;
+    border: 3px solid rgb(60, 89, 252);
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    padding-top: 50px;
+    font-family: Georgia;
+    font-size: 2em;
+  }
+
+  .flipCard .card .back input {
+    background-color: transparent;
+    border: 3px solid rgb(60, 89, 252);
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    width: 30%;
+    justify-content: space-between;
+    padding: 5px;
+    cursor: pointer;
+  }
