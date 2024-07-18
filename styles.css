@@ -193,13 +193,12 @@ h2 {
 }
 
 .service-card {
-    background-image: url('images/man-male-workshop-tools.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
     position: relative;
     overflow: hidden;
     min-height: 250px;
@@ -217,11 +216,17 @@ h2 {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
+    transition: background 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.2); /* Slightly brighten the card */
+}
+
+.service-card:hover::before {
+    background: rgba(0, 0, 0, 0.3); /* Reduce overlay opacity */
 }
 
 .service-card h3, .service-card ul {
@@ -233,7 +238,7 @@ h2 {
 .service-card h3 {
     margin-top: 0;
     font-size: 1.75rem;
-  font-family: 'Hustle', sans-serif  ;
+    font-family: 'Hustle', sans-serif;
 }
 
 .service-card ul {
@@ -254,14 +259,21 @@ h2 {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Hustle', sans-serif  ;
+    font-family: 'Hustle', sans-serif;
     transition: background-color 0.3s ease;
     margin-top: 1rem;
+    position: relative;
+    z-index: 2;
 }
 
 .subscribe-btn:hover {
-    background-color: darkturquoise;
+    background-color: purple;
 }
+
+.subscribe-btn:hover::before {
+    background: rgba(0, 0, 0, 0.3); /* Ensure the background change is visible */
+}
+
 #contact-form {
     display: grid;
     gap: 1rem;
