@@ -45,3 +45,5 @@
         hamburger.classList.toggle("active");
         navLinks.classList.toggle("active");
     });
+
+    //business opportunity card form

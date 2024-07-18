@@ -2,9 +2,10 @@ body {
     font-family: 'Hustle', sans-serif;                                  
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     color: #333;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 /* Navigation section */
 
@@ -165,7 +166,45 @@ nav ul li a {
         display: inline-flex;
     }
 }
+.card-container {
+    width: 400px;
+    height: 500px;
+    margin: 50px auto;
+    position: relative;
+    perspective: 1000px;
+  }
 
+  .card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .card-front {
+    background-image: url('./images/TopShelf-Logo.png');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  .card-back {
+    background-color: white;
+    transform: rotateY(180deg);
+    overflow-y: auto;
+  }
 /* footer section */
 footer {
     background-color: black;
@@ -220,3 +259,110 @@ footer {
 .home-sci a:hover::before {
     width: 100%;
 }
+
+.flipCard {
+    -webkit-perspective: 800;
+    -ms-perspective: 800;
+    -moz-perspective: 800;
+    -o-perspective: 800;
+    perspective: 800;
+    width: 720px;
+    height: 720px;
+    position: relative;
+    margin: 10px 50px;
+  }
+
+  .flipCard .card.flipped {
+    transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg); /* IE 9 */
+    -moz-transform: rotateY(-180deg); /* Firefox */
+    -webkit-transform: rotateY(-180deg); /* Safari and Chrome */
+    -o-transform: rotateY(-180deg); /* Opera */
+  }
+
+  .flipCard .card {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+    -moz-transform-style: preserve-3d;
+    -moz-transition: 0.5s;
+    -ms-transform-style: preserve-3d;
+    -ms-transition: 0.5s;
+    -o-transform-style: preserve-3d;
+    -o-transition: 0.5s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+  }
+
+  .flipCard .card .side {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 2;
+    backface-visibility: hidden; /* W3C */
+    -webkit-backface-visibility: hidden; /* Safari & Chrome */
+    -moz-backface-visibility: hidden; /* Firefox */
+    -ms-backface-visibility: hidden; /* Internet Explorer */
+    -o-backface-visibility: hidden; /* Opera */
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  }
+
+  .flipCard .card .back {
+    background: white;
+    color: black;
+    transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg); /* IE 9 */
+    -moz-transform: rotateY(-180deg); /* Firefox */
+    -webkit-transform: rotateY(-180deg); /* Safari and Chrome */
+    -o-transform: rotateY(-180deg); /* Opera */
+  }
+
+  .flipCard .card .front {
+    background-color: transparent;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    border: 3px solid rgb(60, 89, 252);
+    border-radius: 10px;
+  }
+
+  .flipCard .card .front h1 {
+    text-align: center;
+    letter-spacing: 3px;
+  }
+
+  .flipCard .card .front img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    margin-left: 5rem;
+  }
+
+  .flipCard .card .back {
+    background-color: transparent;
+    border: 3px solid rgb(60, 89, 252);
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    padding-top: 50px;
+    font-family: Georgia;
+    font-size: 2em;
+  }
+
+  .flipCard .card .back input {
+    background-color: transparent;
+    border: 3px solid rgb(60, 89, 252);
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    width: 30%;
+    justify-content: space-between;
+    padding: 5px;
+    cursor: pointer;
+  }
