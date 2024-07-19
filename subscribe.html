@@ -30,8 +30,8 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="subscribe.html">Subscribe</a></li>
             <li><a href="businessOpportunity.html">Business Opportunity</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#blog">Blog</a></li>
           </ul>
           <div class="hamburger">
             <span class="bar"></span>
@@ -43,22 +43,81 @@
     </header>
 
     <main>
-      <section id="home" class="hero">
-        <div class="hero-content">
-          <h2>Welcome to TopShelf</h2>
-          <p>
-            The business offers shoe laundry, shoe repair, and cosmetic
-            restoration services.<br />This includes cleaning, repairing, and
-            restoring shoes to their original condition. These services may
-            include leather treatments, patching, stitching, and other types of
-            shoe maintenance and repair.
-          </p>
-          <a href="#services" class="btn">Explore Our Services</a>
+      <section id="services">
+        <div class="section-content">
+          <h2>Discover Our Premium Services</h2>
+          <div class="services-grid">
+            <div
+              class="service-card"
+              style="background-image: url('/api/placeholder/400/300')"
+            >
+              <h3>All Inclusive</h3>
+              <ul>
+                <li>Deep Clean:</li>
+                <li>Insole</li>
+                <li>Outsole</li>
+                <li>Midsole</li>
+                <li>Uppers and Laces</li>
+              </ul>
+              <button
+                class="subscribe-btn"
+                onclick="subscribe('All Inclusive')"
+              >
+                Contact Us
+              </button>
+            </div>
+            <div
+              class="service-card"
+              style="background-image: url('/api/placeholder/400/300')"
+            >
+              <h3>Low Shelf</h3>
+              <ul>
+                <li>x2 Pairs Deep Cleaned</li>
+                <li>20% Off Cosmetic Restorations</li>
+                <li>Only R199</li>
+              </ul>
+              <button class="subscribe-btn" onclick="subscribe('Low Shelf')">
+                Subscribe
+              </button>
+            </div>
+            <div
+              class="service-card"
+              style="background-image: url('/api/placeholder/400/300')"
+            >
+              <h3>Mid Shelf</h3>
+              <ul>
+                <li>x4 Pairs Deep Cleaned</li>
+                <li>20% Off Cosmetic Restorations</li>
+                <li>Free Pick Up and Delivery</li>
+                <li>Only R310</li>
+              </ul>
+              <button class="subscribe-btn" onclick="subscribe('Mid Shelf')">
+                Subscribe
+              </button>
+            </div>
+            <div
+              class="service-card"
+              style="background-image: url('/api/placeholder/400/300')"
+            >
+              <h3>Top Shelf</h3>
+              <ul>
+                <li>x6 Pairs Deep Cleaned</li>
+                <li>20% Off Cosmetic Restorations</li>
+                <li>Free Pick Up and Delivery</li>
+                <li>Only R499</li>
+              </ul>
+              <button class="subscribe-btn" onclick="subscribe('Top Shelf')">
+                Subscribe
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
+
     <footer>
       <p><u>Interact with us and visit our socials:</u></p>
+
       <br />
       <span class="home-sci">
         <a href="https://www.facebook.com/login.php/"
@@ -109,16 +168,6 @@
           }
         });
       });
-
-      // Handle form submission
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          // Here you would typically send the form data to a server
-          alert("Thank you for your message. We will get back to you soon!");
-          this.reset();
-        });
     </script>
   </body>
 </html>

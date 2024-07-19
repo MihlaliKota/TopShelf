@@ -115,62 +115,6 @@ main {
     margin-top: 60px;
 }
 
-.hero {
-    background-image: url('images/man-male-workshop-tools.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 76vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    position: relative;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-.hero h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    font-size: 30px;
-}
-
-.btn {
-    display: inline-block;
-    background-color: turquoise;
-    color: #fff;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.about p{
-    font-size: 30px;
-}
-
-.btn:hover {
-    background-color: purple;
-}
 
 section {
     padding: 4rem 1rem;
@@ -278,47 +222,12 @@ h2 {
     background: rgba(0, 0, 0, 0.3); /* Ensure the background change is visible */
 }
 
-#contact-form {
-    display: grid;
-    gap: 1rem;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-#contact p {
-    text-align: center;
-}
-
-#contact-form input, #contact-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#contact-form button {
-    background-color: turquoise;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#contact-form button:hover {
-    background-color: turquoise;
-}
-
 footer {
     background-color: black;
     color: white;
     text-align: center;
     padding: 1rem;
 }
-
-
-
 
 .home-sci {
     align-items: center;
@@ -364,6 +273,3 @@ footer {
 .home-sci a:hover::before {
     width: 100%;
 }
-
-/* nav-links section */
-

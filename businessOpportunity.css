@@ -2,12 +2,16 @@ body {
     font-family: 'Hustle', sans-serif;                                  
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
-    scroll-behavior: smooth;
 }
-/* Navigation section */
+
+h1, h2, h3 {
+    font-family: 'Hustle', sans-serif  ;
+    text-align: center;
+    font-size: 35px;
+}
 
 header {
     background-color: #fff;
@@ -31,7 +35,7 @@ header {
 .logo h1 {
     margin: 0;
     font-size: 1.5rem;
-    color:rgb(60, 89, 252);
+    color:turquoise;
     letter-spacing: 5px;
 }
 
@@ -49,20 +53,15 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    transition: color 0.3s ease;
-    text-decoration:underline ;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
-/* nav ul li a:hover {
+nav ul li a:hover {
     color: turquoise;
-    transition: 0.3s ease-in;
-    border: 2px solid turquoise;
-    padding: 10px;
-    background-color: transparent;
-    letter-spacing: 5px;
-    border-radius: 5px;
-    
-} */
+    transform: scale(1.1);
+}
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -80,7 +79,7 @@ nav ul li a {
 @media (max-width: 768px) {
     .nav-links {
         position: absolute;
-        left: -100%;
+        left: 100%;
         top: 5rem;
         flex-direction: column;
         background-color: #fff;
@@ -111,6 +110,7 @@ nav ul li a {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
+
 .main{
     display: flex;
     letter-spacing: 5px;
