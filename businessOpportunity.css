@@ -180,61 +180,6 @@ nav ul li a:hover {
         display: inline-flex;
     }
 }
-/* footer section */
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-.home-sci {
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    transition: color 0.3s ease-in;
-}
-
-.home-sci a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    border-spacing: 1rem;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border: .2rem solid #ccc;
-    border-radius: 50%;
-    font-size: 25px;
-    color: var(--main-color);
-    z-index: 1;
-    overflow: hidden;
-    transition: 0.4s;
-}
-
-.home-sci a:hover {
-    color: var(--bg-color);
-    
-}
-
-.home-sci a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background:rgb(60, 89, 252);
-    color: white;
-    z-index: -1;
-    transition: .4s;
-}
-
-.home-sci a:hover::before {
-    width: 100%;
-}
-
 /* form-contact */
 * {
 	box-sizing: border-box;
@@ -399,4 +344,85 @@ footer {
 
 .form-group textarea{
     height: 5rem;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+}
+.hours{
+    width: 33.3%;
+    margin: 5px;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.hours h2{
+    font-size: 24px;
+    text-align: center;
+    margin: 5px;
+}
+.hours ul li  {
+    text-align: center;
+    list-style-type: none;
+}
+.hours span{
+    color: rgb(60, 89, 252);
+}
+
+.home-sci {
+    align-items: center;
+    width: 33.3%;
+    margin: 5px;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    border-spacing: 1rem;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: .2rem solid #ccc;
+    border-radius: 50%;
+    font-size: 25px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.home-sci a:hover {
+    color: var(--bg-color);
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:rgb(60, 89, 252);
+    color: white;
+    z-index: -1;
+    transition: .4s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+.address{
+    align-items: center;
+    width: 33.3%;
+    border: 2px solid #fff;
+    margin: 5px;
+}
+.address iframe{
+    width: 100%;
 }

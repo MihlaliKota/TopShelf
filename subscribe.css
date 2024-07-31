@@ -36,7 +36,7 @@ header {
 .logo h1 {
     margin: 0;
     font-size: 1.5rem;
-    color:turquoise;
+    color:#333;
     letter-spacing: 5px;
 }
 
@@ -118,17 +118,16 @@ main {
 
 
 section {
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
 }
 
 .section-content {
-    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
 
 h2 {
-    color: turquoise;
+    color: #333;
     margin-bottom: 1rem;
     font-size: 2.5rem;
     font-family: 'Mistic terror', mistic terror;
@@ -136,16 +135,17 @@ h2 {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
-}
-
+  }
+  
 .service-card {
     background-size: cover;
     background-position: center;
+    height: 1000px;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
     position: relative;
@@ -155,7 +155,6 @@ h2 {
     flex-direction: column;
     justify-content: flex-end;
 }
-
 .service-card::before {
     content: '';
     position: absolute;
@@ -176,35 +175,12 @@ h2 {
 
 .service-card:hover::before {
     background: rgba(0, 0, 0, 0.3); /* Reduce overlay opacity */
-}
-
-.service-card h3, .service-card ul {
-    color: #fff;
-    position: relative;
-    z-index: 2;
-}
-
-.service-card h3 {
-    margin-top: 0;
-    font-size: 1.75rem;
-    font-family: 'Mistic terror', mistic terror;
-}
-
-.service-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-family: 'Mistic terror', mistic terror;
-}
-
-.service-card ul li {
-    font-size: 1rem;
-}
-
+    }  
 .subscribe-btn {
     background-color: turquoise;
     color: #fff;
     border: none;
+    margin-bottom: 0.5rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
@@ -223,17 +199,44 @@ h2 {
     background: rgba(0, 0, 0, 0.3); /* Ensure the background change is visible */
 }
 
+#about-services-container{
+    width: 93%;
+    margin-left: 1rem;
+}
+.about-services {
+    padding: 1rem;
+}
+
 footer {
     background-color: black;
     color: white;
     text-align: center;
     padding: 1rem;
+    display: flex;
+}
+.hours{
+    width: 33.3%;
+    margin: 5px;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.hours h2{
+    font-size: 24px;
+    text-align: center;
+    margin: 5px;
+}
+.hours ul li  {
+    text-align: center;
+    list-style-type: none;
+}
+.hours span{
+    color: rgb(60, 89, 252);
 }
 
 .home-sci {
     align-items: center;
-    width: 80px;
-    height: 80px;
+    width: 33.3%;
+    margin: 5px;
 }
 
 .home-sci a {
@@ -272,5 +275,14 @@ footer {
 }
 
 .home-sci a:hover::before {
+    width: 100%;
+}
+.address{
+    align-items: center;
+    width: 33.3%;
+    border: 2px solid #fff;
+    margin: 5px;
+}
+.address iframe{
     width: 100%;
 }

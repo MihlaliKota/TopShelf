@@ -30,8 +30,8 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="subscribe.html">Subscribe</a></li>
             <li><a href="businessOpportunity.html">Business Opportunity</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#blog">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
           </ul>
           <div class="hamburger">
             <span class="bar"></span>
@@ -49,64 +49,37 @@
           <div class="services-grid">
             <div
               class="service-card"
-              style="background-image: url('/api/placeholder/400/300')"
+              style="background-image: url('/images/inclusive-service.jpg')"
             >
-              <h3>All Inclusive</h3>
-              <ul>
-                <li>Deep Clean:</li>
-                <li>Insole</li>
-                <li>Outsole</li>
-                <li>Midsole</li>
-                <li>Uppers and Laces</li>
-              </ul>
               <button
                 class="subscribe-btn"
                 onclick="subscribe('All Inclusive')"
                 href ="businessOpportunity.html"
               >
-                Contact Us
+              Contact Us
               </button>
             </div>
             <div
               class="service-card"
-              style="background-image: url('/api/placeholder/400/300')"
+              style="background-image: url(/images/low-shelf-service.jpeg);"
+              
             >
-              <h3>Low Shelf</h3>
-              <ul>
-                <li>x2 Pairs Deep Cleaned</li>
-                <li>20% Off Cosmetic Restorations</li>
-                <li>Only R199</li>
-              </ul>
               <button class="subscribe-btn" onclick="subscribe('Low Shelf')">
                 Subscribe
               </button>
             </div>
             <div
               class="service-card"
-              style="background-image: url('/api/placeholder/400/300')"
+              style="background-image: url('/images/mid-shelf-service.jpeg')"
             >
-              <h3>Mid Shelf</h3>
-              <ul>
-                <li>x4 Pairs Deep Cleaned</li>
-                <li>20% Off Cosmetic Restorations</li>
-                <li>Free Pick Up and Delivery</li>
-                <li>Only R310</li>
-              </ul>
               <button class="subscribe-btn" onclick="subscribe('Mid Shelf')">
                 Subscribe
               </button>
             </div>
             <div
               class="service-card"
-              style="background-image: url('/api/placeholder/400/300')"
+              style="background-image: url('/images/top-shelf-service.jpeg')"
             >
-              <h3>Top Shelf</h3>
-              <ul>
-                <li>x6 Pairs Deep Cleaned</li>
-                <li>20% Off Cosmetic Restorations</li>
-                <li>Free Pick Up and Delivery</li>
-                <li>Only R499</li>
-              </ul>
               <button class="subscribe-btn" onclick="subscribe('Top Shelf')">
                 Subscribe
               </button>
@@ -114,13 +87,62 @@
           </div>
         </div>
       </section>
+
+      <section id="about-services-container">
+        <h2>Take Advantage of our subscription services</h2>
+        <div class="about-services">
+          <h2>Deep cleans:</h2>
+          <p>
+            Get your sneakers the care they deserve with our Stack Them
+            Up subscription packages. With this subscription, you'll receive 
+            deep sneaker cleans every month. We use premium cleaning products 
+            and techniques to remove dirt, stains, and odors, so your sneakers
+            maintain their Topshelf condition. keep your favorite kicks 
+            looking fresh each month.
+          </p>
+
+          <h2>Free Pick-up and Delivery:</h2>
+          <p>
+            Convenience is our priority, and that's why we offer free
+             pick-up and delivery as part of your subscription. Simply 
+             schedule a convenient time, and our team will collect your 
+             sneakers from your doorstep. After our expert cleaning, we'll 
+             return them to you, looking fresh. It's a hassle-free experience 
+             that lets you enjoy perfectly cleaned sneakers without leaving the 
+             comfort of your home. (only applies to the Mid and Top shelf packages.) 
+          </p>
+
+          <h2>20% off cosmetic Restorations:</h2>
+          <p>
+            As a valued subscriber, you'll enjoy an exclusive 20% 
+            discount on our cosmetic restoration treatments. Whether your
+            sneakers have minor scuffs or need a touch-up, we're skilled
+            technicians are here to make them look flawless. From restoring
+            colors to addressing minor damages, our cosmetic restorations
+            will breathe new life into your sneakers. With this
+            subscription perk, you can keep your sneaker collection 
+            looking Topshelf at a fraction of the cost. It's our way of helping
+             you maintain your sneakers in Topshelf condition. 
+          </p>
+
+        </div>
+
+      </section>
     </main>
 
     <footer>
+      <div class="hours">
+        <h2>Trading hours</h2>
+        <ul>
+          <li>Monday - friday <br><span>08:00 - 17:00</span></li>
+          <li>Saturday <br><span>10:00 - 15:30</span></li>
+          <li>Sunday <br><span>Closed</span></li>
+        </ul>
+      </div>
+      <div class="home-sci">
       <p><u>Interact with us and visit our socials:</u></p>
-
       <br />
-      <span class="home-sci">
+      <span >
         <a href="https://www.facebook.com/login.php/"
           ><i class="bx bxl-facebook"></i
         ></a>
@@ -131,7 +153,18 @@
           ><i class="bx bxl-instagram"></i
         ></a>
       </span>
+    
       <p>&copy; 2024 Top shelf sneaker cleaner. All rights are reserved.</p>
+    </div>
+    <div class="address">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206.8946315130492!2d18.461398284903165!3d-33.93304851870999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5db8109d6d1b%3A0x4445cf422c8656aa!2sTop%20shelf%20sneaker%20cleaner!5e0!3m2!1sen!2sza!4v1722341125608!5m2!1sen!2sza" 
+      width="500" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
     </footer>
     <script>
       function subscribe(service) {

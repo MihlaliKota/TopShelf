@@ -316,15 +316,31 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
+    display: flex;
 }
-
-
-
+.hours{
+    width: 33.3%;
+    justify-content: space-evenly;
+    border: 2px solid #fff;
+}
+.hours h2{
+    font-size: 30px;
+    text-align: center;
+    color: #fff
+}
+.hours ul li  {
+    list-style-type: none;
+    border: 2px solid #fff;
+    margin-right: 20px;
+}
+.hours span{
+    color: turquoise;
+}
 
 .home-sci {
     align-items: center;
-    width: 80px;
-    height: 80px;
+    width: 33.3%;
+    margin: 5px;
 }
 
 .home-sci a {
@@ -356,7 +372,7 @@ footer {
     left: 0;
     width: 0;
     height: 100%;
-    background:rgb(60, 89, 252);
+    background: turquoise;
     color: white;
     z-index: -1;
     transition: .4s;
@@ -365,6 +381,12 @@ footer {
 .home-sci a:hover::before {
     width: 100%;
 }
-
-/* nav-links section */
-
+.address{
+    align-items: center;
+    width: 33.3%;
+    border: 2px solid #fff;
+    margin: 5px;
+}
+.address iframe{
+    width: 100%;
+}
