@@ -1,0 +1,242 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  font-size: 35px;
+}
+
+header {
+  background-color: #fff;
+  color: #333;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: turquoise;
+  letter-spacing: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  color: turquoise;
+  transform: scale(1.1);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    left: 100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+main {
+  margin-top: 80px; /* Account for fixed header */
+  padding: 20px;
+  min-height: calc(100vh - 160px); /* Ensures content takes full viewport height minus header and footer */
+  box-sizing: border-box;
+}
+
+section {
+  padding: 4rem 1rem;
+}
+
+.post {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  align-items: flex-start;
+}
+
+.post-image {
+  max-width: 200px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.post-content {
+  flex: 1;
+  max-height: 100px; /* Initial height for collapsed content */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.post-content.expanded {
+  max-height: 1000px; /* Adjust to fit your content */
+}
+
+.post h2 {
+  margin-top: 0;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.post-actions a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.post-actions a:hover {
+  color: turquoise;
+}
+
+.comments-section {
+  margin-top: 20px;
+}
+
+.comment-input {
+  width: calc(100% - 100px); /* Adjusted for the button width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.comment-submit-btn {
+  padding: 10px 20px;
+  background-color: turquoise;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-submit-btn:hover {
+  background-color: darkturquoise;
+}
+
+.comments-list {
+  margin-top: 10px;
+}
+
+.read-more-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: turquoise;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.read-more-btn:hover {
+  background-color: darkturquoise;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li span {
+  display: block;
+  color: turquoise;
+}

@@ -1,86 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TopShelf</title>
-    <link rel="stylesheet" href="index.css" />
-    <link href="https://fonts.cdnfonts.com/css/hustle" rel="stylesheet" />
-    <script src="JavaScript/scripts.js" defer></script>
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="header-content">
-        <div class="logo">
-          <h1>TopShelf</h1>
-        </div>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="subscribe.html">Subscribe</a></li>
-            <li><a href="businessOpportunity.html">Business Opportunity</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TopShelf</title>
+  <link rel="stylesheet" href="blog.css" />
+  <link href="https://fonts.cdnfonts.com/css/hustle" rel="stylesheet" />
+  <script src="scripts.js" defer></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <h1>TopShelf</h1>
       </div>
-    </header>
-    <main>
-      <section class="blog-section">
-      </section>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="subscribe.html">Subscribe</a></li>
+          <li><a href="businessOpportunity.html">Business Opportunity</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="post">
+        <h2>Sneaker Cleaning</h2>
+        <img src="/images/dirty sneaker.jfif" alt="Sneakers" class="post-image">
+        <div class="post-content">
+          <p>Clean Sneakers?</p>
+          <p>Sneakers have become more than just footwear; they are a fashion statement, a reflection of our style and personality. Whether you're a sneakerhead with a collection worth thousands or someone who simply loves a comfortable pair of kicks, one thing is certain: keeping your sneakers clean is crucial. Enter Topshelf Sneaker Cleaner, your go-to solution for maintaining that fresh-out-of-the-box look.</p>
+          <p>Why Clean your Sneakers</p>
+          <p><b>Appearance:</b> Clean sneakers look better. Period. Dirt, grime, and stains can ruin the aesthetic of even the most stylish pair of kicks. A clean pair of sneakers elevates your entire outfit and gives a positive impression.<br>
+  
+          <b>Durability:</b> Regular cleaning can extend the life of your sneakers. Dirt and grime can break down materials, leading to cracks, tears, and other damage. By keeping them clean, you're investing in their longevity.<br>
+          
+          <b>Health:</b> Dirty sneakers can harbor bacteria, fungi, and other microorganisms that can cause odors and even infections. Keeping them clean is not just about looks; it's about your health too.<br>
+          
+          <b>Resale Value:</b> For sneakerheads, the resale value of a pair of sneakers can be significant. Keeping them clean and well-maintained can fetch a higher price if you ever decide to part ways with them.</p>
+          <div class="post-creation">
+            <form id="user-form">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+              <label for="surname">Surname:</label>
+              <input type="text" id="surname" name="surname" required>
+            </form>
+            <button id="post-btn">Submit</button>
+          </div>
+          <div class="post-actions">
+            <a href="#" class="like-btn"><i class='bx bx-like'></i> Like</a>
+            <a href="#" class="share-btn"><i class='bx bx-share'></i> Share</a>
+            <a href="#" class="comment-btn"><i class='bx bx-comment'></i> Comment</a>
+            <a href="#" class="save-btn"><i class='bx bx-bookmark'></i> Save</a>
+          </div>
+          <div class="comments-section">
+            <input type="text" class="comment-input" placeholder="Add a comment...">
+            <button class="comment-submit-btn">Comment</button>
+            <div class="comments-list"></div>
+          </div>
+        </div>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </section>
   </main>
+
   <footer>
     <div class="hours">
       <h2>Trading hours</h2>
       <ul>
-        <li>Monday - friday <br><span>08:00 - 17:00</span></li>
+        <li>Monday - Friday <br><span>08:00 - 17:00</span></li>
         <li>Saturday <br><span>10:00 - 15:30</span></li>
         <li>Sunday <br><span>Closed</span></li>
       </ul>
     </div>
     <div class="home-sci">
-    <p><u>Interact with us and visit our socials:</u></p>
-    <br />
-    <span >
-      <a href="https://www.facebook.com/login.php/"
-        ><i class="bx bxl-facebook"></i
-      ></a>
-      <a href="https://twitter.com/?lang=en-za"
-        ><i class="bx bxl-twitter"></i
-      ></a>
-      <a href="https://www.instagram.com/?hl=en"
-        ><i class="bx bxl-instagram"></i
-      ></a>
-    </span>
-  
-    <p>&copy; 2024 Top shelf sneaker cleaner. All rights are reserved.</p>
-  </div>
-  <div class="address">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206.8946315130492!2d18.461398284903165!3d-33.93304851870999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5db8109d6d1b%3A0x4445cf422c8656aa!2sTop%20shelf%20sneaker%20cleaner!5e0!3m2!1sen!2sza!4v1722341125608!5m2!1sen!2sza" 
-    width="500" 
-    height="100%" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+      <!-- Social links go here -->
+    </div>
+    <div class="location">
+      <!-- Location details go here -->
+    </div>
   </footer>
-    <script src="script.js"></script>
-  </body>
+</body>
+<script href="script.js"></script>
 </html>
