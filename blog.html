@@ -33,11 +33,12 @@
     </div>
   </header>
 
+ 
   <main>
     <section>
       <div class="post">
         <h2>Sneaker Cleaning</h2>
-        <img src="/images/dirty sneaker.jfif" alt="Sneakers" class="post-image">
+        <img src="images/dirty sneaker.jfif" alt="Sneakers" class="post-image">
         <div class="post-content">
           <p>Clean Sneakers?</p>
           <p>Sneakers have become more than just footwear; they are a fashion statement, a reflection of our style and personality. Whether you're a sneakerhead with a collection worth thousands or someone who simply loves a comfortable pair of kicks, one thing is certain: keeping your sneakers clean is crucial. Enter Topshelf Sneaker Cleaner, your go-to solution for maintaining that fresh-out-of-the-box look.</p>
@@ -92,5 +93,89 @@
     </div>
   </footer>
 </body>
-<script href="script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const readMoreBtns = document.querySelectorAll('.read-more-btn');
+  const postContents = document.querySelectorAll('.post-content');
+  const postBtn = document.getElementById('post-btn');
+  const commentsList = document.querySelector('.comments-list');
+  const commentInput = document.querySelector('.comment-input');
+  const commentSubmitBtn = document.querySelector('.comment-submit-btn');
+  const likeBtns = document.querySelectorAll('.like-btn');
+  const shareBtns = document.querySelectorAll('.share-btn');
+  const saveBtns = document.querySelectorAll('.save-btn');
+  const form = document.getElementById('user-form');
+
+  // Check if user is authenticated
+  function isAuthenticated() {
+    const name = localStorage.getItem('name');
+    const surname = localStorage.getItem('surname');
+    return name && surname;
+  }
+
+  // Show prompt to fill in name and surname
+  function promptAuthentication() {
+    alert('Please enter your name and surname to perform this action.');
+  }
+
+  // Handle form submission
+  postBtn.addEventListener('click', function () {
+    const name = document.getElementById('name').value.trim();
+    const surname = document.getElementById('surname').value.trim();
+    if (name && surname) {
+      localStorage.setItem('name', name);
+      localStorage.setItem('surname', surname);
+      alert('Your information has been saved.');
+    } else {
+      alert('Please enter both your name and surname.');
+    }
+  });
+
+  // Handle read more functionality
+  readMoreBtns.forEach((btn, index) => {
+    btn.addEventListener('click', function () {
+      const content = postContents[index];
+      content.classList.toggle('expanded');
+      btn.textContent = content.classList.contains('expanded') ? 'Read Less' : 'Read More';
+    });
+  });
+
+  // Handle comment submission
+  commentSubmitBtn.addEventListener('click', function () {
+    if (!isAuthenticated()) {
+      promptAuthentication();
+      return;
+    }
+
+    const commentText = commentInput.value.trim();
+    if (commentText) {
+      const commentDiv = document.createElement('div');
+      commentDiv.className = 'comment';
+      commentDiv.textContent = commentText;
+      commentsList.appendChild(commentDiv);
+      commentInput.value = ''; // Clear input
+    }
+  });
+
+  // Handle like, share, and save actions
+  [...likeBtns, ...shareBtns, ...saveBtns].forEach(btn => {
+    btn.addEventListener('click', function (event) {
+      if (!isAuthenticated()) {
+        event.preventDefault();
+        promptAuthentication();
+      }
+    });
+  });
+
+  // Mobile navigation
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+});
+
+</script>
 </html>
