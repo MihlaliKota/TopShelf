@@ -64,51 +64,61 @@ document.addEventListener("DOMContentLoaded", enableSmoothScrolling);
 
 // blog
 
-document.addEventListener('DOMContentLoaded', function () {
-  const readMoreBtns = document.querySelectorAll('.read-more-btn');
-  const postContents = document.querySelectorAll('.post-content');
+// document.addEventListener('DOMContentLoaded', function () {
+//   const readMoreBtns = document.querySelectorAll('.read-more-btn');
+//   const postContents = document.querySelectorAll('.post-content');
 
-  readMoreBtns.forEach((btn, index) => {
-    btn.addEventListener('click', function () {
-      const content = postContents[index];
-      content.classList.toggle('expanded');
-      btn.textContent = content.classList.contains('expanded') ? 'Read Less' : 'Read More';
-    });
-  });
+//   readMoreBtns.forEach((btn, index) => {
+//     btn.addEventListener('click', function () {
+//       const content = postContents[index];
+//       content.classList.toggle('expanded');
+//       btn.textContent = content.classList.contains('expanded') ? 'Read Less' : 'Read More';
+//     });
+//   });
 
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
+//   const hamburger = document.querySelector('.hamburger');
+//   const navLinks = document.querySelector('.nav-links');
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
-  });
+//   hamburger.addEventListener('click', () => {
+//     navLinks.classList.toggle('active');
+//     hamburger.classList.toggle('active');
+//   });
 
-  const postBtn = document.getElementById('post-btn');
-  const commentsList = document.querySelector('.comments-list');
-  const commentInput = document.querySelector('.comment-input');
+//   const postBtn = document.getElementById('post-btn');
+//   const commentsList = document.querySelector('.comments-list');
+//   const commentInput = document.querySelector('.comment-input');
 
-  postBtn.addEventListener('click', function () {
-    const name = document.getElementById('name').value;
-    const surname = document.getElementById('surname').value;
-    if (name && surname) {
-      const newComment = document.createElement('div');
-      newComment.className = 'comment';
-      newComment.textContent = `Submitted by: ${name} ${surname}`;
-      commentsList.appendChild(newComment);
-    }
-  });
+//   postBtn.addEventListener('click', function () {
+//     const name = document.getElementById('name').value;
+//     const surname = document.getElementById('surname').value;
+//     if (name && surname) {
+//       const newComment = document.createElement('div');
+//       newComment.className = 'comment';
+//       newComment.textContent = `Submitted by: ${name} ${surname}`;
+//       commentsList.appendChild(newComment);
+//     }
+//   });
 
-  const commentSubmitBtn = document.querySelector('.comment-submit-btn');
+//   const commentSubmitBtn = document.querySelector('.comment-submit-btn');
 
-  commentSubmitBtn.addEventListener('click', function () {
-    const commentText = commentInput.value.trim();
-    if (commentText) {
-      const commentDiv = document.createElement('div');
-      commentDiv.className = 'comment';
-      commentDiv.textContent = commentText;
-      commentsList.appendChild(commentDiv);
-      commentInput.value = ''; // Clear input
-    }
-  });
+//   commentSubmitBtn.addEventListener('click', function () {
+//     const commentText = commentInput.value.trim();
+//     if (commentText) {
+//       const commentDiv = document.createElement('div');
+//       commentDiv.className = 'comment';
+//       commentDiv.textContent = commentText;
+//       commentsList.appendChild(commentDiv);
+//       commentInput.value = ''; // Clear input
+//     }
+//   });
+// });
+document.getElementById("read-more-btn").addEventListener("click", function() {
+  var hiddenContent = document.getElementById("hidden-content");
+  hiddenContent.style.display = hiddenContent.style.display === "block" ? "none" : "block";
+  
+  if (hiddenContent.style.display === "block") {
+    this.textContent = "Read Less";
+  } else {
+    this.textContent = "Read More";
+  }
 });
